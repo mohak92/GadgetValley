@@ -1,0 +1,1 @@
+CREATE DATABASE gadget_valley_db;
