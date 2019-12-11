@@ -27,7 +27,7 @@ app.use(express.static("public"));
 
 app.get('/', function (req, res) {
 
-    res.send('Welcome to Passport with Sequelize');
+    res.render('index');
 
 });
 
