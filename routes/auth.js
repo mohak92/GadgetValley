@@ -7,6 +7,8 @@ module.exports = function (app, passport) {
     app.get('/dashboard', isLoggedIn, authController.dashboard);
     app.get('/logout', authController.logout);
 
+    app.get('/admin', isAdmin, authController.admin);
+
     app.post('/signup', passport.authenticate('local-signup', {
         successRedirect: '/dashboard',
 
@@ -22,6 +24,15 @@ module.exports = function (app, passport) {
     }
 
     ));
+
+    function isAdmin(req, res, next) {
+        if (req.user.isAdmin 
+            && req.isAuthenticated()){
+                console.log("Inside If");
+                return next();
+            }
+        res.redirect('/dashboard')
+    }
 
     function isLoggedIn(req, res, next) {
 
