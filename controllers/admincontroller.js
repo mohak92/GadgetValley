@@ -1,9 +1,14 @@
 var exports = module.exports = {}
 
+var user = require("../model/user.js");
+
 exports.allusers = function(req, res) {
- 
-    res.render('allusers');
- 
+    user.all(function (data) {
+        var hbsObject = {
+            users: data
+        };
+        res.render("allusers", hbsObject);
+    });
 }
 
 exports.addproducts = function(req, res) {
