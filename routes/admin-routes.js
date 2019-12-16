@@ -2,6 +2,7 @@ var adminController = require('../controllers/admincontroller.js');
 
 module.exports = function (app, passport) {
     app.get('/allusers', isAdmin, adminController.allusers);
+
     app.get('/addproducts', isAdmin, adminController.addproducts);
 
     function isAdmin(req, res, next) {
