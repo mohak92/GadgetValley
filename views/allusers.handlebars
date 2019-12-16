@@ -1,1 +1,24 @@
 <h1>All Users</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table style="width: 100%;">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Admin</th>
+                </tr>
+                {{#each users}}
+                <tr>
+                    <td>{{firstname}}</td>
+                    <td>{{lastname}}</td>
+                    <td><a href="mailto:{{email}}">{{email}}</a></td>
+                    <td>{{isAdmin}}</td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</div>
