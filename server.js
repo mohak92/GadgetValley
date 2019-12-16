@@ -45,13 +45,12 @@ require('./config/passport/passport.js')(passport, models.user);
 models.sequelize.sync().then(function () {
 
     console.log('Nice! Database looks fine')
+    app.listen(PORT, function () {
+        console.log("Sever is listening at http://localhost:" + PORT);
+    });
 
 }).catch(function (err) {
 
     console.log(err, "Something went wrong with the Database Update!")
 
-});
-
-app.listen(PORT, function () {
-    console.log("Sever is listening at http://localhost:" + PORT);
 });
