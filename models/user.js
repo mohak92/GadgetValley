@@ -45,20 +45,7 @@ module.exports = function (sequelize, Sequelize) {
 
 
     });
-
-    User.associate = function(models){
-        User.hasMany(models.Product, {
-            foreignKey: "owner_id",
-            onDelete: "cascade"
-        });
-    };
-
-    User.associate = function(models){
-        User.hasMany(models.Transaction, {
-            foreignKey: "renter_id"
-        });
-    };
-
+    
     return User;
 
 }
