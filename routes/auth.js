@@ -4,13 +4,13 @@ module.exports = function (app, passport) {
 
     app.get('/signup',isLoggedOut ,authController.signup);
     app.get('/signin',isLoggedOut ,authController.signin);
-    app.get('/dashboard', isLoggedIn, authController.dashboard);
+    app.get('/products', isLoggedIn, authController.products);
     app.get('/logout', authController.logout);
 
     app.get('/admin', isAdmin, authController.admin);
 
     app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect: '/dashboard',
+        successRedirect: '/products',
 
         failureRedirect: '/signup'
     }
@@ -18,7 +18,7 @@ module.exports = function (app, passport) {
     ));
 
     app.post('/signin', passport.authenticate('local-signin', {
-        successRedirect: '/dashboard',
+        successRedirect: '/products',
 
         failureRedirect: '/signin'
     }
@@ -31,7 +31,7 @@ module.exports = function (app, passport) {
                 console.log("Inside If");
                 return next();
             }
-        res.redirect('/dashboard')
+        res.redirect('/products')
     }
 
     function isLoggedIn(req, res, next) {
@@ -50,7 +50,7 @@ module.exports = function (app, passport) {
 
             return next();
 
-        res.redirect('/dashboard');
+        res.redirect('/products');
 
     }
 }
