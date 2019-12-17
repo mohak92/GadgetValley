@@ -11,7 +11,7 @@ module.exports = function (app, passport) {
             console.log("Inside If");
             return next();
         }
-        res.redirect('/dashboard')
+        res.redirect('/products')
     }
 
     function isLoggedIn(req, res, next) {
@@ -30,7 +30,7 @@ module.exports = function (app, passport) {
 
             return next();
 
-        res.redirect('/dashboard');
+        res.redirect('/products');
 
     }
 }
