@@ -1,3 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Gadget Valley</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/cart">Cart</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        </form>
+        <a class="btn btn-light" href="/logout">Logout</a>
+    </div>
+</nav>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -6,23 +28,31 @@
     </div>
 </div>
 <div class="container">
-    <form id="addproducts" name="addproducts" method="post" action="/addproducts">
+    <form id="addproducts" name="addproducts">
         <div class="form-group">
-            <label for="product_name">Product Name</label>
-            <input name="product_name" type="text" style="width: 100%;"/>
+            <label for="title">Product Name</label>
+            <input name="title" id="title" type="text" style="width: 100%;"/>
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <input name="description" type="text" style="width: 100%;"/>
+            <input name="description" id="description" type="text" style="width: 100%;"/>
+        </div>
+        <div class="form-group">
+            <label for="image">Picture Url</label>
+            <input name="image" id="image" type="text" style="width: 100%;"/>
+        </div>
+        <div class="form-group">
+            <label for="type">Category</label>
+            <input name="type" id="type" type="text" style="width: 100%;"/>
+        </div>
+        <div class="form-group">
+            <label for="stock">Stock</label>
+            <input name="stock" id="stock" type="text" style="width: 100%;"/>
         </div>
         <div class="form-group">
             <label for="price">Price</label>
-            <input name="price" type="text" style="width: 100%;"/>
+            <input name="price" id="price" type="text" style="width: 100%;"/>
         </div>
-        <div class="form-group">
-            <label for="picture_link">Picture Url</label>
-            <input name="picture_link" type="text" style="width: 100%;"/>
-        </div>
-        <input class="btn btn-primary" type="submit" value="Add Gadget" />
+        <button class="btn btn-primary" type="submit">Add Gadget</button>
     </form>
 </div>
