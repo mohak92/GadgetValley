@@ -1,7 +1,7 @@
 # Gadget Valley
 
 ### Overview
-##### Launch Deployed Version of the Application by [clicking here](https://www.google.com/)
+##### Launch Deployed Version of the Application by [clicking here](https://radiant-beyond-98455.herokuapp.com/)
 
 ### Project Description
 
