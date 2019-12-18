@@ -5,6 +5,8 @@ module.exports = function (app, passport) {
 
     app.get('/addproducts', isAdmin, adminController.addproducts);
 
+    app.get('/allorders', isAdmin, adminController.allorders);
+
     function isAdmin(req, res, next) {
         if (req.user.isAdmin
             && req.isAuthenticated()) {
