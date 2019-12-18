@@ -40,7 +40,7 @@ CREATE TABLE `categories` (
 CREATE TABLE `orders` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL ,
   `uid` int(11) NOT NULL,
-  `add_id` int(11) NOT NULL,
+  `pid` int(11) NOT NULL,
   `amount` varchar(255) NOT NULL,
   `paymentmethod` varchar(255) NOT NULL
 );
