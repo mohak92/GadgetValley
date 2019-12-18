@@ -16,3 +16,9 @@ exports.addproducts = function(req, res) {
     res.render('addproducts');
  
 }
+
+exports.allorders = function(req, res) {
+ 
+    res.render('allorders');
+ 
+}
