@@ -21,7 +21,55 @@
         <a class="btn btn-light" href="/logout">Logout</a>
     </div>
 </nav>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Gadgets for lease</h1>
+        </div>
+    </div>
+</div>
 
-<h2>Products</h2>
-<h5>Hurray! you are logged in.</h5>
-<h5>Display all products.</h5>
+<div class="container">
+    <div class="row">
+        {{#each products}}
+        <div class="col-11 mx-auto my-3 col-md-4">
+            <div class="card">
+                <div class="card">
+                    <div class="row p-3">
+                        <div class="col-5"><img class="mg-fluid img-thumbnail"
+                                src="{{image}}"
+                                alt=""></div>
+                        <div class="col-5 text-capitalize">
+                            <h6 class="text-uppercase pt-2 redText">{{title}}</h6>
+                            <p>32 Spring Street, New York 10012</p>
+                        </div>
+                        <div class="col-1">
+                            <div class="badge badge-success">4.9</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row py-3 ml-1">
+                        <div class="col-5 text-uppercase">
+                            <p>Category :</p>
+                            <p>Lease Price :</p>
+                        </div>
+                        <div class="col-7 text-uppercase">
+                            <p>{{type}}</p>
+                            <p>${{price}}/mo</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row text-center no-gutters pb-3">
+                        <div class="col-12">
+                            <a href="/products"
+                                target="_blank" class="btn redBtn text-uppercase">Lease Device
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
